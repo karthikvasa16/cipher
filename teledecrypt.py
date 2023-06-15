@@ -32,6 +32,7 @@ def decrypt_message(message):
 @bot.message_handler(commands=['start'])
 def handle_start(message):
     bot.send_message(message.chat.id, "Welcome to the encryption/decryption bot!")
+    bot.send_message(message.chat.id, "How to use this bot: /encrypt (your message) or /decrypt (your message)")
 
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
